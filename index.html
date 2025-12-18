@@ -1,66 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ultron® Terms of Service</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #f4f4f4; color: #333; }
-    h1, h2 { color: #2c3e50; }
-    h1 { text-align: center; }
-    p { margin: 10px 0; }
-    ul { margin: 10px 0 20px 20px; }
-    .section { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultron™ - Multipurpose Discord Bot</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    /* Global */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #0a0a0f;
+        color: #e0e0e0;
+        line-height: 1.6;
+    }
+    a { color: #00bfff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    header {
+        background: linear-gradient(90deg, #0f0f1f, #1a1a2e);
+        padding: 30px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    header h1 {
+        font-size: 2.5rem;
+        color: #00bfff;
+        margin: 0;
+    }
+    header p {
+        font-size: 1.1rem;
+        color: #a0a0a0;
+        margin-top: 5px;
+    }
+
+    /* Container */
+    .container {
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    /* Section Titles */
+    h2 {
+        color: #00d4ff;
+        border-left: 4px solid #00bfff;
+        padding-left: 10px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    /* Cards for command categories */
+    .card {
+        background: #1c1c2e;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    /* Command list */
+    ul.commands {
+        list-style: none;
+        padding-left: 0;
+    }
+    ul.commands li {
+        background: #111123;
+        margin: 5px 0;
+        padding: 10px 15px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.2s;
+    }
+    ul.commands li:hover {
+        background: #00bfff;
+        color: #0a0a0f;
+        cursor: default;
+    }
+    ul.commands li span {
+        font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #0f0f1f;
+        border-top: 1px solid #222;
+        color: #777;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+        header h1 { font-size: 2rem; }
+        .card { padding: 15px; }
+        ul.commands li { flex-direction: column; align-items: flex-start; }
+    }
+</style>
 </head>
 <body>
-  <h1>Ultron® Terms of Service</h1>
 
-  <div class="section">
-    <h2>1. Acceptance of Terms</h2>
-    <p>By using Ultron® Discord bot (“the Bot”), you agree to comply with these Terms of Service. If you do not agree, do not use the Bot.</p>
-  </div>
+<header>
+    <h1>Ultron™</h1>
+    <p>Multipurpose Discord Bot – Fun, Moderation, Economy & More</p>
+</header>
 
-  <div class="section">
-    <h2>2. Bot Usage</h2>
-    <ul>
-      <li>You may use the Bot only for lawful purposes.</li>
-      <li>You shall not attempt to harm, exploit, or misuse the Bot or Discord servers.</li>
-      <li>You may not use the Bot to harass, threaten, or abuse other users.</li>
-    </ul>
-  </div>
+<div class="container">
 
-  <div class="section">
-    <h2>3. Privacy</h2>
-    <p>The Bot may collect minimal data necessary to function, such as server IDs, user IDs, and messages for moderation features. No personal information is stored outside Discord servers. By using the Bot, you consent to this data collection.</p>
-  </div>
+    <!-- About -->
+    <section>
+        <h2>About Ultron™</h2>
+        <div class="card">
+            <p>Ultron™ is a multipurpose Discord bot designed for servers of all types. Whether you want moderation tools, fun commands, games, or economy features, Ultron™ has you covered. Fully customizable with prefix commands, slash commands, and advanced features like NQN, mass unban, and channel nuking with confirmation.</p>
+            <p>Default prefix: <span>,</span> (You can also change it with <span>,prefix set {new_prefix}</span>)</p>
+        </div>
+    </section>
 
-  <div class="section">
-    <h2>4. Liability</h2>
-    <p>The Bot is provided "as is" without warranties of any kind. The developer is not responsible for any damages, losses, or disruptions caused by using the Bot.</p>
-  </div>
+    <!-- Commands -->
+    <section>
+        <h2>Commands</h2>
 
-  <div class="section">
-    <h2>5. User Conduct</h2>
-    <ul>
-      <li>Do not share malicious content through the Bot.</li>
-      <li>Do not attempt to reverse engineer or modify the Bot.</li>
-      <li>Respect other users and Discord’s community guidelines at all times.</li>
-    </ul>
-  </div>
+        <!-- Basic Commands -->
+        <div class="card">
+            <h3>Basic Commands</h3>
+            <ul class="commands">
+                <li><span>,hello</span> → Greeting</li>
+                <li><span>,ping</span> → Bot Latency</li>
+                <li><span>,cf</span> → Coin Flip / Bet</li>
+                <li><span>,joke</span> → English Joke</li>
+                <li><span>,hjoke</span> → Hindi Joke</li>
+                <li><span>,avatar @user</span> → Show Avatar</li>
+                <li><span>,meme</span> → Send a Meme</li>
+                <li><span>,tstart [Duration] [Message]</span> → Start a Timer</li>
+                <li><span>,afk [reason]</span> → Set AFK</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>6. Changes to Terms</h2>
-    <p>These Terms may be updated from time to time. Continued use of the Bot constitutes acceptance of any updated terms.</p>
-  </div>
+        <!-- Actions -->
+        <div class="card">
+            <h3>🤗 Actions</h3>
+            <ul class="commands">
+                <li><span>,cuddle @user</span> → Cuddle someone</li>
+                <li><span>,kiss @user</span> → Kiss someone</li>
+                <li><span>,hug @user</span> → Hug someone</li>
+                <li><span>,kill @user</span> → Fun kill someone</li>
+                <li><span>,punch @user</span> → Punch someone</li>
+                <li><span>,slap @user</span> → Slap someone</li>
+                <li><span>,poke @user</span> → Poke someone</li>
+                <li><span>,lick @user</span> → Lick someone</li>
+                <li><span>,tickle @user</span> → Tickle someone</li>
+                <li><span>,highfive @user</span> → High-five someone</li>
+                <li><span>,handholding @user</span> → Hold hands</li>
+                <li><span>,bite @user</span> → Bite someone</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>7. Contact</h2>
-    <p>If you have questions or concerns regarding these Terms, contact the developer. Discord username <strong>mr.mythic_killer</strong> or Discord server:https://discord.gg/N9Ja3pzbSN</p>
-  </div>
+        <!-- Emotes -->
+        <div class="card">
+            <h3>😁 Emotes</h3>
+            <ul class="commands">
+                <li><span>,dance</span> → Dance by yourself</li>
+                <li><span>,grin</span> → Show a grin</li>
+                <li><span>,cry</span> → Cry</li>
+                <li><span>,greet</span> → Greet yourself</li>
+            </ul>
+        </div>
 
-  <footer style="text-align:center; margin-top:30px;">
-    <p>&copy; 2025 Ultron®. All rights reserved.</p>
-  </footer>
+        <!-- Stats -->
+        <div class="card">
+            <h3>📊 Stats</h3>
+            <ul class="commands">
+                <li><span>,m @user</span> → Total messages</li>
+                <li><span>,i @user</span> → Invites</li>
+                <li><span>,mc</span> → Member count</li>
+                <li><span>,warn list @user</span> → Total warns</li>
+                <li><span>,si</span> → Server info</li>
+            </ul>
+        </div>
+
+        <!-- Moderation -->
+        <div class="card">
+            <h3>🛡️ Moderation</h3>
+            <ul class="commands">
+                <li><span>,kick @user</span></li>
+                <li><span>,ban @user</span></li>
+                <li><span>,timeout @user 10m</span></li>
+                <li><span>,unban @user_id</span></li>
+                <li><span>,removetimeout @user</span></li>
+                <li><span>,autodelete images/link on/off</span></li>
+                <li><span>,mute @user</span></li>
+                <li><span>,warn @user {reason}</span></li>
+                <li><span>,unmute @user</span></li>
+                <li><span>,purge 10</span></li>
+                <li><span>,nuke</span> → Channel nuke with confirmation</li>
+            </ul>
+        </div>
+
+        <!-- Antinuke -->
+        <div class="card">
+            <h3>🚨 Antinuke (Admin Only)</h3>
+            <ul class="commands">
+                <li><span>,antinuke</span> → Status</li>
+                <li><span>,antinuke enable/disable</span></li>
+                <li><span>,antinuke whitelist add @user</span></li>
+                <li><span>,antinuke whitelist remove @user</span></li>
+                <li><span>,antinuke whitelist</span></li>
+                <li><span>,antinuke transcripts &lt;#channel&gt;</span> → Set log channel</li>
+            </ul>
+        </div>
+
+        <!-- Economy / Games -->
+        <div class="card">
+            <h3>💰 Economy / Games</h3>
+            <ul class="commands">
+                <li><span>,bal @user</span> → Balance</li>
+                <li><span>,daily</span> → Daily coins</li>
+                <li><span>,cf &lt;amount&gt; heads/tails</span> → Coinflip bet</li>
+                <li><span>,blackjack &lt;amount&gt;</span></li>
+                <li><span>,slots &lt;amount&gt;</span></li>
+                <li><span>,send/give &lt;amount&gt; @user</span></li>
+            </ul>
+        </div>
+
+        <!-- Giveaways -->
+        <div class="card">
+            <h3>🎁 Giveaways</h3>
+            <ul class="commands">
+                <li><span>,gstart &lt;time&gt; &lt;winners&gt; &lt;prize&gt;</span> → Start giveaway</li>
+                <li>Example: <span>,gstart 1d2h30m10s 2 Nitro</span></li>
+            </ul>
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2025 Ultron™ | All Rights Reserved
+</footer>
+
 </body>
 </html>
+
